@@ -39,7 +39,7 @@ class AssetDataProvider(private val context: Context) : DataProvider {
         val users3 =
             gson.fromJson<List<User>>(user3, TypeToken.getParameterized(List::class.java, User::class.java).type)
 
-        return (users1 + users2 + users3)
+        return (users1 + users2 + users3).multiply(2)
     }
 
     private fun readFromAssets(id: String): String {
